@@ -18,5 +18,9 @@ public enum Tokens {
     Division,
     Identificador,
     Numero,
+    Menor,
+    Mayor,
+    finLinea,
+    cicloFor,
     ERROR
 }

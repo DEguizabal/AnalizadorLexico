@@ -14,7 +14,7 @@ for |
 if |
 else |
 print |
-elif |
+elif|
 return |
 while {lexeme=yytext(); return Reservadas;}
 {espacio} {/*Ignore*/}
@@ -24,6 +24,9 @@ while {lexeme=yytext(); return Reservadas;}
 "-" {return Resta;}
 "*" {return Multiplicacion;}
 "/" {return Division;}
+";" {return finLinea;}
+"<" {return Menor;}
+">" {return Mayor;} 
 {L}({L}|{D})* {lexeme=yytext(); return Identificador;}
 ("(-"{D}+")")|{D}+ {lexeme=yytext(); return Numero;}
  . {return ERROR;}
