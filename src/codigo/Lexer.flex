@@ -19,11 +19,11 @@ return |
 while {lexeme=yytext(); return Reservadas;}
 {espacio} {/*Ignore*/}
 "//".* {/*Ignore*/}
-"=" {return Igual;}
-"+" {return Suma;}
-"-" {return Resta;}
-"*" {return Multiplicacion;}
-"/" {return Division;}
+"=" {lexeme=yytext(); return Igual;}
+"+" {lexeme=yytext(); return Suma;}
+"-" {lexeme=yytext(); return Resta;}
+"*" {lexeme=yytext(); return Multiplicacion;}
+"/" {lexeme=yytext(); return Division;}
 {L}({L}|{D})* {lexeme=yytext(); return Identificador;}
 ("(-"{D}+")")|{D}+ {lexeme=yytext(); return Numero;}
  . {return ERROR;}
