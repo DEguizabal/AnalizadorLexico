@@ -10,9 +10,12 @@ espacio=[ ,\t,\r,\n]+
     public String lexeme;
 %}
 %%
-int |
+for |
 if |
 else |
+print |
+elif |
+return |
 while {lexeme=yytext(); return Reservadas;}
 {espacio} {/*Ignore*/}
 "//".* {/*Ignore*/}
